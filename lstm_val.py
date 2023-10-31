@@ -2,7 +2,6 @@
 
 import streamlit as st
 from streamlit import set_page_config
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import datetime as dt
