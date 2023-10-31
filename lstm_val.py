@@ -16,8 +16,7 @@ CACHE_DIR = ".cache"
 ad.user_cache_dir = lambda *args: CACHE_DIR
 # Create the cache dir if it doesn't exist
 Path(CACHE_DIR).mkdir(exist_ok=True)
-import yfinance as yf
-import seaborn as sns
+
 
 # Set page configuration for full width
 set_page_config(layout="wide")
