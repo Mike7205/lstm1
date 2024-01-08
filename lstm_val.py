@@ -31,7 +31,7 @@ val_USD = pd.read_excel('LSTM_mv.xlsx', sheet_name='D1_USD')
 val_USDD1 = val_USD[['Date','USD/PLN','Day + 1 Prediction']].iloc[:-1]
 
 fig_USDD1 = px.line(val_USDD1[-50:], x='Date', y=['USD/PLN','Day + 1 Prediction'], color_discrete_map={
-                  'USD/PLN': 'mediumseagreen', 'Day + 1 Prediction': 'dodgerblue'}, width=1000, height=500)
+                  'USD/PLN': 'orange', 'Day + 1 Prediction': 'dodgerblue'}, width=1000, height=500) #'mediumseagreen'
 fig_USDD1.update_layout(plot_bgcolor='white',showlegend=True,xaxis=dict(showgrid=True, gridwidth=0.5, gridcolor='Lightgrey'),
                       yaxis=dict(showgrid=True, gridwidth=0.5, gridcolor='Lightgrey'))
 
