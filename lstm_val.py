@@ -45,7 +45,7 @@ val_EUR = pd.read_excel('LSTM_mv.xlsx', sheet_name='D1_EUR')
 val_EURD1 = val_EUR[['Date','EUR/PLN','Day + 1 Prediction']].iloc[:-1]
 
 fig_EURD1 = px.line(val_EURD1[-50:], x='Date', y=['EUR/PLN','Day + 1 Prediction'], color_discrete_map={
-                  'EUR/PLN': 'mediumseagreen', 'Day + 1 Prediction': 'dodgerblue'}, width=1000, height=500)
+                  'EUR/PLN': 'pink', 'Day + 1 Prediction': 'dodgerblue'}, width=1000, height=500)
 fig_EURD1.update_layout(plot_bgcolor='white',showlegend=True,xaxis=dict(showgrid=True, gridwidth=0.5, gridcolor='Lightgrey'),
                       yaxis=dict(showgrid=True, gridwidth=0.5, gridcolor='Lightgrey'))
 
