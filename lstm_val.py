@@ -51,4 +51,9 @@ fig_EURD1.update_layout(plot_bgcolor='white',showlegend=True,xaxis=dict(showgrid
 
 #fig_EURD1.add_vline(x = today,line_width=1, line_dash="dash", line_color="black")
 fig_EURD1.update_layout(xaxis=None, yaxis=None)    
-st.plotly_chart(fig_EURD1, use_container_width=True)  
+st.plotly_chart(fig_EURD1, use_container_width=True) 
+
+sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
+selected = st.feedback("thumbs")
+if selected is not None:
+    st.markdown(f"You selected: {sentiment_mapping[selected]}")
