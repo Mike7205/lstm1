@@ -55,14 +55,14 @@ st.plotly_chart(fig_EURD1, use_container_width=True)
 
 @st.dialog("Cast your vote")
 def vote(item):
-    st.write(f"Why is {item} your favorite?")
+    st.write(f"Why is {item} your favorite Model?")
     reason = st.text_input("Because...")
     if st.button("Submit"):
         st.session_state.vote = {"item": item, "reason": reason}
         st.rerun()
 
 if "vote" not in st.session_state:
-    st.write("Vote for your favorite")
+    st.write("Vote for your favorite Model")
     if st.button("A"):
         vote("A")
     if st.button("B"):
