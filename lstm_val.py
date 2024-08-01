@@ -53,6 +53,25 @@ fig_EURD1.update_layout(plot_bgcolor='white',showlegend=True,xaxis=dict(showgrid
 fig_EURD1.update_layout(xaxis=None, yaxis=None)    
 st.plotly_chart(fig_EURD1, use_container_width=True) 
 
+@st.dialog("Cast your vote")
+def vote(item):
+    st.write(f"Why is {item} your favorite?")
+    reason = st.text_input("Because...")
+    if st.button("Submit"):
+        st.session_state.vote = {"item": item, "reason": reason}
+        st.rerun()
+
+if "vote" not in st.session_state:
+    st.write("Vote for your favorite")
+    if st.button("A"):
+        vote("A")
+    if st.button("B"):
+        vote("B")
+else:
+    f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
+
+
+
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
 if selected is not None:
