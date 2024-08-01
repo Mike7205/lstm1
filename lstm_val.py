@@ -70,11 +70,9 @@ if "vote" not in st.session_state:
 else:
     f"You voted for {st.session_state.vote['item']} because {st.session_state.vote['reason']}"
 
-
-
-sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
-selected = st.feedback("thumbs")
-if selected is not None:
-    st.markdown(f"You selected: {sentiment_mapping[selected]}")
+#sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
+#selected = st.feedback("thumbs")
+#if selected is not None:
+#    st.markdown(f"You selected: {sentiment_mapping[selected]}")
 
 #st.context.cookies
